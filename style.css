@@ -1,0 +1,211 @@
+body{
+    text-align: center;
+    --pico-primary: green;
+    --pico-primary-hover: rgb(133, 165, 141);
+}
+:root{
+    --pico-primary: green;
+}
+footer{
+    font-size: 0.85rem;
+}
+header {
+    position: fixed; /* Makes the header stay in place when scrolling */
+    top: 0;          /* Aligns it to the very top of the viewport */
+    left: 0;         /* Aligns it to the very left of the viewport */
+    width: 100%;     /* Makes it span the full width of the viewport */
+    z-index: 1000; 
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 255, 127, 0.06)
+}
+header nav {
+    max-width: var(--pico-container-width); /* Or your main.container max-width */
+    margin: 0 auto; /* Center the nav content if it's not full width */
+    padding: 0 1rem; /* Add horizontal padding inside the fixed nav */
+    display: flex; /* Use Pico's default nav flex behavior */
+    justify-content: space-between;
+    align-items: center;
+}
+button:hover{
+    --pico-primary-hover: rgb(133, 165, 141);
+}
+.topright-button details summary[role="button"]{
+  padding: 0.3rem 0.8rem;
+  font-size: 0.85rem;
+}
+.squares{
+    display: grid;
+    --columns: 4;
+    grid-template-columns: repeat(var(--columns, 1), 1fr);
+    gap: 0.5rem;
+    padding 1rem;
+}
+.squares article{
+    text-align: left;
+    padding: 1rem;
+    transition: transform 2s ease-in-out, box-shadow 2s ease-in-out;
+}
+.squares p{
+    text-align: center;
+}
+.squares i{
+    color: var(--pico-primary);
+    font-size: 1.5em;
+}
+button{
+  padding: 0.3rem 0.8rem;
+  font-size: 0.85rem;
+  background-color: transparent;
+  border: 2px solid green;
+}
+.projects{
+    display: grid;
+    --columns: 3;
+    grid-template-columns: repeat(var(--columns, 1), 1fr);
+    gap: 0.5rem;
+    padding 1rem;
+}
+.projects article{
+    text-align: left;
+    padding: 0.9rem;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    box-sizing: border-box;
+    gap: 0.5rem;
+}
+.projects article:hover{
+    transform: scale(1.02);
+    filter: brightness(0.9);
+}
+.projects article button:hover{
+    transform: scale(1.02);
+    filter: brightness(0.9);
+}
+.projects p{
+    margin-top: 0.6rem;
+    text-align: center;
+}
+.projects i{
+    color: white;
+    font-size: 1em;
+}
+#language{
+    display: block;
+    font-size: 1.5em;
+    margin: 0 auto;
+    line-height: 1;
+    margin-left: 0.5rem;
+}
+.projects h3{
+    padding: 0.4rem;
+    margin-bottom: 0.5rem;
+}
+.projects button{
+    width: 100%;
+    background-color: rgb(8, 65, 22);
+    border: 2px solid rgb(8, 65, 22);
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+.projects a{
+    color: white;
+    text-decoration: none;
+}
+.projects img{
+    border-radius: 9px;
+}
+.squares a{
+    text-decoration: none;
+}
+.contacts{
+    display: block;
+    text-align: center;
+}
+.bun{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+.bun button{
+    width: 100%;
+    border: 2px solid rgb(8, 65, 22);
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+.bun a{
+    text-decoration: none;
+    color:white;
+}
+.bun button:hover{
+    transform: scale(1.05);
+    filter: brightness(0.9);
+    border: 2px solid rgb(57, 82, 63);
+}
+#txt{
+    font-size: 0.6rem;
+    color: gray;
+    line-height: 0.7;
+    margin-bottom: 0.4rem;
+}
+.blog{
+    text-align: left;
+    padding: 0.2em;
+    text-decoration: none;
+}
+.blog article{
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+.blog article:hover{
+    transform: scale(1.05);
+    filter: brightness(0.9);
+}
+.blog h3{
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+.blog h3:hover{
+    color: rgb(139, 192, 152);
+}
+#details{
+    display: inline-block;
+    padding: 0em;
+    margin-top: 0rem;
+    margin-bottom: 0.3rem;
+    color: gray;
+    font-size: 0.85rem;
+}
+#blo{
+    display: inline-block;
+
+}
+#blo a{
+    text-decoration: none;
+    color: white;
+}
+@media (max-width: 1200px) {
+    .squares {
+        --columns: 4;
+    }
+}
+@media (max-width: 900px) {
+    .squares {
+        --columns: 2;
+    }    
+}
+@media (max-width: 768px) {
+    .squares {
+        --columns: 1;
+    }    
+}
+@media (max-width: 1200px) {
+    .projects {
+        --columns: 3;
+    }
+}
+@media (max-width: 900px) {
+    .projects {
+        --columns: 2;
+    }    
+}
+@media (max-width: 768px) {
+    .projects {
+        --columns: 1;
+    }    
+}
