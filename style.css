@@ -9,6 +9,10 @@ body{
 footer{
     font-size: 0.85rem;
 }
+footer a {
+    color: var(--pico-primary);
+    font-size: 0.95rem;
+}
 header {
     position: fixed; /* Makes the header stay in place when scrolling */
     top: 0;          /* Aligns it to the very top of the viewport */
