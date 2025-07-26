@@ -9,6 +9,7 @@ body{
 a{
     text-decoration: none;
 }
+
 footer{
     font-size: 0.85rem;
 }
@@ -18,12 +19,14 @@ footer a {
 }
 header {
     position: fixed; /* Makes the header stay in place when scrolling */
-    top: 0;          /* Aligns it to the very top of the viewport */
-    left: 0;         /* Aligns it to the very left of the viewport */
-    width: 100%;     /* Makes it span the full width of the viewport */
+    top: 10px;
+    bottom: unset;
+    left: 20px;
+    right: 20px;
     z-index: 1000; 
     backdrop-filter: blur(8px);
-    background-color: rgba(0, 255, 127, 0.06)
+    background-color: rgba(0, 255, 127, 0.02);
+    border-radius: 15px;
 }
 header nav {
     max-width: var(--pico-container-width); /* Or your main.container max-width */
@@ -32,6 +35,7 @@ header nav {
     display: flex; /* Use Pico's default nav flex behavior */
     justify-content: space-between;
     align-items: center;
+    min-width: 100px;
 }
 button:hover{
     --pico-primary-hover: rgb(133, 165, 141);
@@ -51,6 +55,7 @@ button:hover{
     text-align: left;
     padding: 1rem;
     transition: transform 2s ease-in-out, box-shadow 2s ease-in-out;
+    border-radius: 20px;
 }
 .squares p{
     text-align: center;
@@ -62,8 +67,9 @@ button:hover{
 button{
   padding: 0.3rem 0.8rem;
   font-size: 0.85rem;
-  background-color: transparent;
-  border: 2px solid green;
+  background-color: rgba(0, 255, 0, 0.025);
+  border: 0.2em solid green;
+  border-radius: 10px;
 }
 .projects{
     display: grid;
