@@ -1,0 +1,19 @@
+--- 
+layout: default
+title: blog | stainlesteel
+--- 
+<main class="container">
+        <br><br><hr>
+        <h2>{{ page.title }}</h2>
+        {% assign words = page.content | number_of_words %}
+        {% assign wpm = words | divided_by: 200 | at_least: 1 %}
+        <p id="details">{{ page.date | date: "%B %d, %Y"}}, {{ page.category }}<br>
+             {{ words }} Words, {{ wpm }} minutes to read
+        </p>
+        <br><br>
+        <button id="blo"><i class="fa-solid fa-backward"></i>  <a href="/blog.html">Go Back</a></button>
+        <br><br>
+        <article class="content-area">
+            {{ content }}
+        </article>
+</main>
