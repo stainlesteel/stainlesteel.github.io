@@ -8,9 +8,9 @@ title: Blog | stainlesteel
         <p>my blog where I might regularly post stuff.</p>
         <div class="blog">
         {% for post in site.posts %}
-        {% assign words = page.content | number_of_words %}
-        {% assign wpm = words | divided_by: 200 | at_least: 1 %}
-           <article class="content-area">
+            {% assign words = page.content | number_of_words %}
+            {% assign wpm = words | divided_by: 200 | at_least: 1 %}
+            <article class="content-area">
             <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
             <p>{{ post.description }}</p>
             <p id="details">{{post.date | date: "%B %d %Y"}}, {{post.category }},</p>
