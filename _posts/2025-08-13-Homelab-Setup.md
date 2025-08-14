@@ -18,6 +18,7 @@ Other than that, there's nothing to mention. It's basic e-waste hardware that is
 ### The Setup (Software)
 There is no interesting Proxmox, TRUEnas, or Unraid setup running here. It was Ubuntu (Gnome!) then Debian, and then headless Debian.
 As for services, I just did bare metal installs for everything, then I stopped being insanse, and used CasaOS, which is just a collection of docker containers that allow you to manage the filesystem, manage the entire system over SSH,  manage Docker containers easily, with caveats (It's just Yacht.), and manage Samba for you (literally, any edits to the pre-configured configuration will be deleted). 
+
 If you didn't know, Docker is just a way to take a Virtual Machine, run an app on it with all of its dependencies, make it easier to interact with the host machine (for ports, or volumes) and also make it easy to configure with docker compose (you make a yml, or rather steal it from GitHub), run a command and Docker does it all for you.
 TL;DR, It fixes the issue of 'It only works on my machine' and proompts the issue of 'Nothing works on any of our machines', as for Kubernetes, I don't know it enough, but from what I've heard, it lets you not have to dick around with Docker, and instead dick around with Kubernetes.
 

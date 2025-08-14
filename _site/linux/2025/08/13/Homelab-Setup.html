@@ -43,7 +43,7 @@
         <br><br>
         <button id="blo"><i class="fa-solid fa-backward"></i>  <a href="/blog.html">Go Back</a></button>
         <br><br>
-        <article class="content-area">
+        <article class="content-area" style="border-radius: 20px;">
             <h3 id="message">Message</h3>
 <p>Unfortunately, I haven’t been able to have more posts on this blog, not for a serious reason, I forgot. However, with the switch to Jekyll (because it’s on GH Pages) there should (maybe) be more because it’s easier to edit Markdown than pure H*ML.</p>
 <h3 id="what">What?</h3>
@@ -57,8 +57,9 @@ Coming at a whopping 2 cores, 4 gigabytes of ram, and a Terabyte of storage, it 
 Other than that, there’s nothing to mention. It’s basic e-waste hardware that is fun to mess around with in Linux.</p>
 <h3 id="the-setup-software">The Setup (Software)</h3>
 <p>There is no interesting Proxmox, TRUEnas, or Unraid setup running here. It was Ubuntu (Gnome!) then Debian, and then headless Debian.
-As for services, I just did bare metal installs for everything, then I stopped being insanse, and used CasaOS, which is just a collection of docker containers that allow you to manage the filesystem, manage the entire system over SSH,  manage Docker containers easily, with caveats (It’s just Yacht.), and manage Samba for you (literally, any edits to the pre-configured configuration will be deleted). 
-If you didn’t know, Docker is just a way to take a Virtual Machine, run an app on it with all of its dependencies, make it easier to interact with the host machine (for ports, or volumes) and also make it easy to configure with docker compose (you make a yml, or rather steal it from GitHub), run a command and Docker does it all for you.
+As for services, I just did bare metal installs for everything, then I stopped being insanse, and used CasaOS, which is just a collection of docker containers that allow you to manage the filesystem, manage the entire system over SSH,  manage Docker containers easily, with caveats (It’s just Yacht.), and manage Samba for you (literally, any edits to the pre-configured configuration will be deleted).</p>
+
+<p>If you didn’t know, Docker is just a way to take a Virtual Machine, run an app on it with all of its dependencies, make it easier to interact with the host machine (for ports, or volumes) and also make it easy to configure with docker compose (you make a yml, or rather steal it from GitHub), run a command and Docker does it all for you.
 TL;DR, It fixes the issue of ‘It only works on my machine’ and proompts the issue of ‘Nothing works on any of our machines’, as for Kubernetes, I don’t know it enough, but from what I’ve heard, it lets you not have to dick around with Docker, and instead dick around with Kubernetes.</p>
 
 <p>Here is a small list of key: value pairs showing my Docker containers along with a bleak explanation:</p>
