@@ -2,3 +2,5 @@
 title: Stainlesteel
 description: My Home Page
 base_url: ""
+plugins:
+   - jekyll-feed

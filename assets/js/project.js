@@ -10,3 +10,7 @@ const aibot = document.getElementById('aibot');
         aibot.addEventListener('click', function() {
             window.open('https://github.com/stainlesteel/ai-discord-bot', '_blank');
         });  
+const dock_aibot = document.getElementById('aibot-docker');
+        dock_aibot.addEventListener('click', function() {
+            window.open('https://hub.docker.com/r/stainlesteel/ai-discord-bot', '_blank');
+        });

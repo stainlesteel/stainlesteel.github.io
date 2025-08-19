@@ -6,7 +6,9 @@ title: Blog | stainlesteel
         <br><br><hr>
         <h2>The Blog</h2>
         <p>my blog where I might regularly post stuff.</p>
+        <button id='blo'><i class="fa-solid fa-square-rss" style="color: orange;"></i>  <a href="/feed.xml">RSS Feed</a></button>
         <div class="blog">
+            <br>
         {% for post in site.posts %}
             <article class="content-area", style="border-radius: 20px;">
             <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>

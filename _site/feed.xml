@@ -1,51 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Homelab Setup</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/assets/css/pico-main/css/pico.min.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    
-</head>
-<body>
-    <header>
-           <nav>
-            <a href="/index.html" style=" text-decoration: none;"><h2>stainlesteel</h2></a>
-            <div class="topright-button">
-               <details class="dropdown">
-                   
-                    <summary role="button" class="outline">Menu</summary>
-                     <ul>
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/projects.html">Projects</a></li>
-                        <li><a href="/contacts.html">Contacts</a></li>
-                        <li><a href="/blog.html">Blog</a></li>
-                     </ul>
-               </details>
-            </div>
-           </nav>
-
-</header>
-     
-
-
-    <main class="container">
-      <main class="container">
-        <br><br><hr>
-        <h2>My Homelab Setup</h2>
-        
-        
-        <p id="details">August 13, 2025, Linux<br>
-             655 Words, 3 minutes to read
-        </p>
-        <br><br>
-        <button id="blo"><i class="fa-solid fa-backward"></i>  <a href="/blog.html">Go Back</a></button>
-        <button id='blo'><i class="fa-solid fa-square-rss" style="color: orange;"></i>  <a href="/feed.xml">RSS Feed</a></button>
-        <br><br>
-        <article class="content-area" style="border-radius: 20px;">
-            <h3 id="message">Message</h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-19T05:12:18+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Stainlesteel</title><subtitle>My Home Page</subtitle><entry><title type="html">My Homelab Setup</title><link href="http://localhost:4000/linux/2025/08/13/Homelab-Setup.html" rel="alternate" type="text/html" title="My Homelab Setup" /><published>2025-08-13T00:00:00+00:00</published><updated>2025-08-13T00:00:00+00:00</updated><id>http://localhost:4000/linux/2025/08/13/Homelab-Setup</id><content type="html" xml:base="http://localhost:4000/linux/2025/08/13/Homelab-Setup.html"><![CDATA[<h3 id="message">Message</h3>
 <p>Unfortunately, I haven’t been able to have more posts on this blog, not for a serious reason, I forgot. However, with the switch to Jekyll (because it’s on GH Pages) there should (maybe) be more because it’s easier to edit Markdown than pure H*ML.</p>
 <h3 id="what">What?</h3>
 <p>On this site, there are some mentions of homelabbing which, if you don’t know, is using a compputer to run webapps, normal apps, or whatever 24/7. For some people, it can also be a hobby where you spend ludicrous amounts of time and money on Hardware to either use 1/24 of its resources on software, or alL of it. (see <a href="&quot;https://youtu.be/l9yY_VWCWlM?si=6KUfOfmQk7cR4-n9&quot;">this video</a>).</p>
@@ -87,22 +40,30 @@ TL;DR, It fixes the issue of ‘It only works on my machine’ and proompts the 
 <h3 id="i-want-to-do-this">“I want to do this!”</h3>
 <p>I can’t help you with that (I think), your best resources are YouTube, r/homelab/r/selfhosted, and AI (with extreme caution!)</p>
 
-<p>TL;DR: Linux is fun until it isn’t.</p>
+<p>TL;DR: Linux is fun until it isn’t.</p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[Version 2!]]></summary></entry><entry><title type="html">Installing Arch Linux for the first time.</title><link href="http://localhost:4000/linux/2025/06/27/Installing-Arch-Linux-On-A-VM.html" rel="alternate" type="text/html" title="Installing Arch Linux for the first time." /><published>2025-06-27T00:00:00+00:00</published><updated>2025-06-27T00:00:00+00:00</updated><id>http://localhost:4000/linux/2025/06/27/Installing-Arch-Linux-On-A-VM</id><content type="html" xml:base="http://localhost:4000/linux/2025/06/27/Installing-Arch-Linux-On-A-VM.html"><![CDATA[<h3 id="installing-arch-manually-for-the-first-time">Installing Arch [manually] for the first time.</h3>
+<h4 id="why">Why?</h4>
+<p>This wasn’t my first time installing Arch Linux, I had
+done it before on an old laptop, but this time I 
+installed it manually on a QEMU/KVM Virtual Machine.
+Why? I saw a video of some guy attempting to install Arch
+Linux on a virtual machine and thought I should do that. 
+Maybe I could learn something for Linux.</p>
+<h4 id="how-long-it-took-and-how-difficult">How long it took and how difficult.</h4>
+<p>I didn’t set a timer but most likely it 
+took 50 minutes, using the official Arch Wiki
+and Gemini for partition errors.
+The difficulty was probably ‘intermiedate’, most of it
+wasn’t hard to do, the only difficult part was 
+trying to fix accidentally ‘formatting a bios partition’.
+In conclusion, here’s a cool arch pfp</p>
 
-        </article>
-</main>
-   
-    </main>
+<p><img src="/assets/img/arch.avif" alt="" /></p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[On a VM.]]></summary></entry><entry><title type="html">First page</title><link href="http://localhost:4000/random/2025/06/26/First-Post.html" rel="alternate" type="text/html" title="First page" /><published>2025-06-26T00:00:00+00:00</published><updated>2025-06-26T00:00:00+00:00</updated><id>http://localhost:4000/random/2025/06/26/First-Post</id><content type="html" xml:base="http://localhost:4000/random/2025/06/26/First-Post.html"><![CDATA[<h3 id="the-first-page">The First Page.</h3>
+<p>I’ve decided to start a extremely bare-bones blog.</p>
+<h4 id="why">Why?</h4>
+<p>I don’t know, I thought it might be cool to 
+have something where I can just say stuff about something. 
+Most likely, the blog will have 1-2 post(s) a month,
+because either I don’t have anything to type about,
+I forget about it, or I didn’t want to type about something.</p>
 
-    <footer>    
-            <i class="fa-brands fa-github fa-lg" style="color: green;"></i> <a href="https://github.com/stainlesteel/stainlesteel.github.io">Source</a>
-            <hr>
-            <p>Something will be put here eventually. <br>
-             This content was made by stainlesteel and is available for anyone to use or modify online.
-            </p>
-</footer>  
-
-</body>
-</html>
-
-
+<p>RSS feeds may be implemented at some point.</p>]]></content><author><name></name></author><category term="Random" /><summary type="html"><![CDATA[You need to click the title to access the posts.]]></summary></entry></feed>
