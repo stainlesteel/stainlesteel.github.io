@@ -11,6 +11,7 @@ a{
 }
 footer{
     font-size: 0.85rem;
+    position: relative;
 }
 footer a {
     color: var(--pico-primary);
@@ -27,6 +28,9 @@ header {
     background-color: rgba(0, 255, 127, 0.03);
     border-radius: 15px;
 }
+.navbar a {
+    color: white;
+}
 header nav {
     max-width: var(--pico-container-width); /* Or your main.container max-width */
     margin: 0 auto; /* Center the nav content if it's not full width */
@@ -35,6 +39,10 @@ header nav {
     justify-content: space-between;
     align-items: center;
     min-width: 100px;
+}
+header nav .topright-button {
+    display: none;
+    visibility: hidden;
 }
 button:hover{
     --pico-primary-hover: rgb(133, 165, 141);
@@ -196,29 +204,37 @@ button{
     .squares {
         --columns: 4;
     }
-}
-@media (max-width: 900px) {
-    .squares {
-        --columns: 2;
-    }    
-}
-@media (max-width: 768px) {
-    .squares {
-        --columns: 1;
-    }    
-}
-@media (max-width: 1200px) {
     .projects {
         --columns: 3;
     }
 }
 @media (max-width: 900px) {
-    .projects {
+    .squares {
         --columns: 2;
     }    
+    .projects {
+        --columns: 2;
+    }
 }
 @media (max-width: 768px) {
-    .projects {
+    .squares {
         --columns: 1;
     }    
+    .projects {
+        --columns: 1;
+    }
+    .navbar {
+        display: block;
+        visibility: visible;
+    }
+}
+@media (max-width: 400px) {
+    .navbar {
+        display: none;
+        visibility: hidden;
+    }
+    header nav .topright-button {
+        display: block;
+        visibility: visible;
+    }
 }
