@@ -4,3 +4,4 @@ description: My Home Page
 base_url: ""
 plugins:
    - jekyll-feed
+   - jekyll-seo-tag
