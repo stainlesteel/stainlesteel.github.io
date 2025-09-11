@@ -1,4 +1,168 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-27T20:11:42+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Stainlesteel</title><subtitle>My Home Page</subtitle><entry><title type="html">My Homelab Setup</title><link href="http://localhost:4000/linux/2025/08/13/Homelab-Setup.html" rel="alternate" type="text/html" title="My Homelab Setup" /><published>2025-08-13T00:00:00+00:00</published><updated>2025-08-13T00:00:00+00:00</updated><id>http://localhost:4000/linux/2025/08/13/Homelab-Setup</id><content type="html" xml:base="http://localhost:4000/linux/2025/08/13/Homelab-Setup.html"><![CDATA[<h3 id="message">Message</h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-09-11T01:19:58+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Stainlesteel</title><subtitle>My Home Page</subtitle><entry><title type="html">Git It! Part 1: Your First Git Repo</title><link href="http://localhost:4000/devops/2025/08/31/Git-It-1-First-Repo.html" rel="alternate" type="text/html" title="Git It! Part 1: Your First Git Repo" /><published>2025-08-31T00:00:00+00:00</published><updated>2025-08-31T00:00:00+00:00</updated><id>http://localhost:4000/devops/2025/08/31/Git-It-1:-First-Repo</id><content type="html" xml:base="http://localhost:4000/devops/2025/08/31/Git-It-1-First-Repo.html"><![CDATA[<h3 id="what">What?</h3>
+<p>Git is a very popular version control tool, and entire companies have been built around it like GitHub.
+It is very popular for many reasons:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Reason</th>
+      <th>Why?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Easy collabration</td>
+      <td>Software development is linear, making it easy to work with is excellent.</td>
+    </tr>
+    <tr>
+      <td>FOSS</td>
+      <td>Many version-control tools before Git were not FOSS, so this was a big win for the Open Source community</td>
+    </tr>
+    <tr>
+      <td>Code tracking</td>
+      <td>For each change, you can make a Git ‘commit’, which stores a version of your code to update, rollback or modify, this is so one big change doesn’t make your working code hard to recover</td>
+    </tr>
+    <tr>
+      <td>Online Platforms</td>
+      <td>Online services have been made around Git like GitHub, which have made it easier for Open Source with things like PRs, Online Repos, Issues, .etc. Others exist like GitLab or BitBucket</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>This is also great for things like CI/CD that are built around version control to make developers life’s easier via automation.</p>
+<h3 id="why">Why?</h3>
+<p>Git is a powerful tool that:</p>
+<ol>
+  <li>Is required if you want a job (or it should be)</li>
+  <li>Is required for easily sharing open-source software</li>
+  <li>Makes your life easier</li>
+  <li>Makes collabration easier</li>
+  <li>Is likely not dying off or changing soon (unlike JS frameworks rebuilding themselves)</li>
+</ol>
+
+<h3 id="wait-lets-install-git">Wait, let’s install Git</h3>
+<p>Installing Git depends on your operating system, and so does the difficulty, but the TL;DR is:</p>
+
+<p><strong>Linux</strong>: just use your package manager:</p>
+<pre><code class="language-bash">dnf install git
+</code></pre>
+
+<p><strong>Windows</strong>: There is an installer for git <a href="https://git-scm.com/downloads/win">here.</a></p>
+
+<p><strong>MacOS</strong>: It may include git by default, if not you can use brew:</p>
+<pre><code class="language-zsh">brew install git
+</code></pre>
+<p>There aren’t many other options besides using package managers, installing XCode, or building from source.</p>
+<h3 id="init--repos">Init &amp;&amp; Repos</h3>
+<p>For each program/project you make, git will store it inside a ‘repo’, a base that will store any code changes, and files once you tell it to.</p>
+
+<p>To make your first repo, we first need a directory which needs code. For the purpose of this post, this will be the directory structure:</p>
+<pre><code>awesome-code {
+    src {
+        main.py
+    }
+    pyproject.toml
+    README.md
+    file-i-cant-afford-to-show.pem
+}
+</code></pre>
+
+<p>And this is the python code in the ‘main.py’:</p>
+<pre><code class="language-python">import time
+
+def main():
+    while True:
+        print('this code is so awesome')
+        time.sleep(1)
+
+if __name__ == '__main__':
+    main()
+</code></pre>
+<p>Now let’s make a git repo.</p>
+
+<p>Run:</p>
+<pre><code class="language-bash">git init
+</code></pre>
+
+<pre><code>#output:
+Initialized empty Git repository in {path}
+</code></pre>
+
+<p>You’ve now just made (or initalized) a git repository, and get access to track your changes as you make more code.</p>
+
+<h3 id="nextjs">Next?(.js)</h3>
+<p>We’ve created a git repo, but don’t understand anything about it, let’s run <code>git status</code>:</p>
+
+<pre><code class="language-bash">On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Untracked files:
+  (use "git add ..." to include in what will be committed)
+	src/main.py
+    pyproject.toml
+    README.md
+    file-i-cant-afford-to-show.pem
+
+no changes added to commit (use "git add" and/or "git commit -a")
+</code></pre>
+<p>Wait! Git recognized the pem key. That can’t be continously tracked because it’s a provate key.</p>
+
+<p>Fortunately, Git has a process to ignore files/directories in the case of ignoring provate files.
+That is called a .gitignore file, a file Git reads and ignores any filename that is linked in it. Let’s make one.</p>
+
+<pre><code class="language-bash">touch .gitignore
+# or open one with your text editor
+nvim .gitignore
+# as for windows users, I don't know 
+# what you guys do
+</code></pre>
+
+<p>To tell git what to not track,
+either the filename (or directory name) has to be labeled, like:</p>
+<pre><code class="language-bash"># this is the .gitignore file, whatever appended to it will 
+file-i-cant-afford-to-show.pem
+</code></pre>
+<p>After writing, let’s run <code>git status</code> again:</p>
+<pre><code class="language-bash">On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Untracked files:
+  (use "git add ..." to include in what will be committed)
+	src/main.py
+    pyproject.toml
+    README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+</code></pre>
+<p>Now that’s been dealt with, we need to add the ‘untracked files’ as called by Git to stage changes for the working directory, 
+which just means preparing them to run a commit.</p>
+
+<p>The command for that is:</p>
+<pre><code class="language-bash">git add .
+# add usually stages files/directories from in the current directory.
+# The '.' symbol states that Git can recursively add files/directories unless those mentioned in a .gitingore (which is what we're doing)
+</code></pre>
+<p>You will see no response, that’s normal.</p>
+<h3 id="now-lets-commit">Now Let’s Commit</h3>
+<p>Now we need to make a ‘commit’, in Git, a commit is a store of your project at that time, that you can revert back to, diverge off of (more on that next post), or continue from.</p>
+
+<p>We’ve already staged those files, now to commit, run:</p>
+<pre><code class="language-bash">git commit -m "{message}"
+# we are running commit in -m mode, allowing to 
+# add a message for esch store we make, in this case you can add whatever you want
+</code></pre>
+
+<p>After that, you will see:</p>
+<pre><code class="language-bash"> [master (root-commit) 221ec6e] {message}
+ 3 files added, {number} insertions(+)
+ create mode 100644 README.md
+ create mode 100644 src/main.py
+ create mode 100644 pyproject.toml
+</code></pre>
+<p>You’ve successfully stored your project change (or rather creation) inside a commit.</p>
+<h3 id="end">End</h3>
+<p>You’ve successfully learned the minimal basics of Git, but as for fixing merge conflicts, tricks. online platforms, branches, and other stuff, this tutorial won’t teach you that.
+If for whatever reason, you want to use this site to learn Git, part 2 will come whenever I feel like it (1-2 months or never).</p>]]></content><author><name></name></author><category term="DevOps" /><summary type="html"><![CDATA[Learn how to version control your code]]></summary></entry><entry><title type="html">My Homelab Setup</title><link href="http://localhost:4000/linux/2025/08/13/Homelab-Setup.html" rel="alternate" type="text/html" title="My Homelab Setup" /><published>2025-08-13T00:00:00+00:00</published><updated>2025-08-13T00:00:00+00:00</updated><id>http://localhost:4000/linux/2025/08/13/Homelab-Setup</id><content type="html" xml:base="http://localhost:4000/linux/2025/08/13/Homelab-Setup.html"><![CDATA[<h3 id="message">Message</h3>
 <p>Unfortunately, I haven’t been able to have more posts on this blog, not for a serious reason, I forgot. However, with the switch to Jekyll (because it’s on GH Pages) there should (maybe) be more because it’s easier to edit Markdown than pure H*ML.</p>
 <h3 id="what">What?</h3>
 <p>On this site, there are some mentions of homelabbing which, if you don’t know, is using a compputer to run webapps, normal apps, or whatever 24/7. For some people, it can also be a hobby where you spend ludicrous amounts of time and money on Hardware to either use 1/24 of its resources on software, or alL of it. (see <a href="&quot;https://youtu.be/l9yY_VWCWlM?si=6KUfOfmQk7cR4-n9&quot;">this video</a>).</p>

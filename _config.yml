@@ -2,5 +2,7 @@
 title: Stainlesteel
 description: My Home Page
 base_url: ""
+highlighter: none
+markdown: kramdown
 plugins:
    - jekyll-feed

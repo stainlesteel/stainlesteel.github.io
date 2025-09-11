@@ -3,6 +3,8 @@ layout: default
 title: blog | stainlesteel
 --- 
 <main class="container">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/srcery.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
         <br><br><hr>
         <h2>{{ page.title }}</h2>
         {% assign words = page.content | number_of_words %}
@@ -17,4 +19,5 @@ title: blog | stainlesteel
         <article class="content-area" style="border-radius: 20px;">
             {{ content }}
         </article>
+        <script>hljs.highlightAll();</script>
 </main>

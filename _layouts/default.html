@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
+    <!-- this just loads pico css-->
     <link rel="stylesheet" href="/assets/css/pico-main/css/pico.min.css">
     <!-- <link rel="stylesheet" href="/assets/css/style.css"> -->
 </head>
 <body>
+    <!-- loads custom styles-->
     <link rel="stylesheet" href="/assets/css/style.css">
     {% include header.html %}
     <br>
+    <!-- loads font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
     <main class="container">
       {{ content }}   
     </main>
     {% include footer.html %}
+    <!-- loads python syntax highlighter 
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/languages/python.min.js" integrity="sha512-2awx7JAahm7dNML+6JhNaCQFP9RV9QSIHo15KbqBYbe9jcjONl3r2e84CduRKaxmBcm+kjCfKEnsetyI9YaaHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script>hljs.highlightAll();</script> -->
 </body>
 </html>
 
