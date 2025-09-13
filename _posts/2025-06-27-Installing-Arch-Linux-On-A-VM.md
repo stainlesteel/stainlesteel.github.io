@@ -20,5 +20,5 @@ The difficulty was probably 'intermiedate', most of it
 wasn't hard to do, the only difficult part was 
 trying to fix accidentally 'formatting a bios partition'.
 In conclusion, here's a cool arch pfp
-
+foo
 ![](/assets/img/arch.avif)
