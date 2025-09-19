@@ -27,5 +27,23 @@ title: blog | stainlesteel
         <article class="content-area" style="border-radius: 20px;">
             {{ content }}
         </article>
+        <!-- code below is wrong by design, previous is next and next is previous according to jekyll post sorting-->
+         <div class="prev-next">
+            {% if page.next.url %}
+             <a href="{{ page.next.url }}">
+              <article class="content-area" style="border-radius: 20px;">
+                <p id="txt">Previous Post</p>
+                <h4>{{ page.next.title }}</h4>
+              </article>
+             </a>
+            {% endif %}
+            {% if page.previous.url %}
+             <a href="{{ page.previous.url}}">
+              <article class="content-area" style="border-radius: 20px;">
+                <p id="txt">Next Post</p>
+                <h4>{{ page.previous.title }}</h4>
+              </article>
+             </a>
+            {% endif %}
         <script>hljs.highlightAll();</script>
 </main>
