@@ -25,7 +25,24 @@
      <script>hljs.highlightAll();</script> -->
      <script src="https://unpkg.com/swup@4"></script>
      <script>
-      const swup = new Swup();
+      // this is a function to load swup.js and custom lastfm widget feature
+       const swup = new Swup();
+       
+       const mango = async function() {
+        let url = "https://fm.qwsteu.org/main?user=pd684_";
+        let feth = await fetch(url);
+        let json = await feth.json();
+
+        console.log(json.title);
+        console.log(json.artist);
+
+        document.querySelector("#lastfm-header").innerHTML = `${json.title}`;
+        document.querySelector("#lastfm-artist").innerHTML = `${json.artist}`;
+       };
+       mango();
+
+       swup.on('contentReplaced', mango); // tell swup to run this function 
+       // a content reload is done
      </script>
 
 </body>

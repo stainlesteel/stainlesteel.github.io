@@ -149,11 +149,14 @@ button{
     padding: 1rem;
 }
 .projects article{
+    display: flexbox;
+    align-items: stretch;
+    flex: 2;
     text-align: left;
     padding: 0.9rem;
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
     box-sizing: border-box;
-    gap: 0.5rem;
+    width: 100%;
     border-radius: 20px;
 }
 .projects article:hover{
@@ -173,7 +176,7 @@ button{
     font-size: 1em;
 }
 #language{
-    display: block;
+    display: grid;
     font-size: 1.5em;
     margin: 0 auto;
     line-height: 1;
@@ -183,12 +186,12 @@ button{
     padding: 0.4rem;
     margin-bottom: 0.5rem;
 }
-.projects button{
+.projects article button{
     width: 100%;
+    margin: 2px;
     background-color: var(--big-button-color);
     border: 2px solid var(--big-button-color);
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-    margin: 2px;
 }
 .projects a{
     color: white;
