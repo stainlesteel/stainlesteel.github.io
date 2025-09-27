@@ -76,3 +76,19 @@ title: home | stainlesteel
         <br><br>
         <br><br><br><br><br>
 </main>
+<script async>
+      // this is a function to load lastfm widget
+       
+       const mango = async function() {
+        let url = "https://fm.qwsteu.org/main?user=pd684_";
+        let feth = await fetch(url);
+        let json = await feth.json();
+
+        console.log(json.title);
+        console.log(json.artist);
+
+        document.querySelector("#lastfm-header").innerHTML = `${json.title}`;
+        document.querySelector("#lastfm-artist").innerHTML = `${json.artist}`;
+       };
+       mango();
+</script>
