@@ -3,16 +3,16 @@ body{
     /* foo */
 }
 :root{
-    --pico-primary: rgb(171, 136, 109);
-    --pico-primary-hover: rgba(171, 136, 109, 0.50);
-    --pico-background-color: rgb(15, 10, 0);
+    --pico-primary: rgb(17, 17, 50);
+    --pico-primary-hover: rgba(20, 20, 50);
+    --pico-background-color: rgb(11, 12, 23);
     --pico-code-background-color: rgb(0, 0, 0);
-    --border-color: rgba(180, 135, 110);
-    --header-background-color: rgba(169, 136, 108, 0.35);
+    --border-color: rgb(17, 17, 50);
+    --header-background-color: rgba(20, 20, 50, 0.35);
     --button-background-color: rgba(29, 17, 35, 0.29);
-    --big-button-color: rgb(171, 136, 109);
+    --big-button-color: rgb(17, 17, 50);
     --font: "Trebuchet MS", Helvetica, sans-serif;
-    --pico-dropdown-background-color: rgba(180, 135, 110, 0.10);
+    --pico-dropdown-background-color: var(--header-background-color);
 }
 .toc details {
     padding: 5px;
@@ -52,7 +52,7 @@ article:hover {
 }
 a{
     text-decoration: none;
-    color: var(--pico-primary);
+    color: white;
 }
 pre code {
     text-align: left;
@@ -70,14 +70,14 @@ table {
     border-radius: 15px;
 }
 footer i {
-    color: var(--pico-primary);
+    color: white;
 }
 footer{
     font-size: 0.85rem;
     position: relative;
 }
 footer a {
-    color: var(--pico-primary);
+    color: white;
     font-size: 0.95rem;
 }
 header {
@@ -108,11 +108,14 @@ header nav .topright-button {
     display: none;
     visibility: hidden;
     color: var(--pico-primary);
+    backdrop-filter: blur(8px);
 }
 .topright-button details summary[role="button"]{
   padding: 0.3rem 0.8rem;
   font-size: 0.85rem;
-  color: var(--pico-primary);
+  color: white;
+  border: 1px solid white;
+  backdrop-filter: blur(8px);
 }
 .squares{
     display: grid;
