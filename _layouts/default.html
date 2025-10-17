@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="night">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     <!-- this just loads pico css-->
-    <link rel="stylesheet" href="/assets/css/pico-main/css/pico.min.css">
-    <!-- <link rel="stylesheet" href="/assets/css/style.css"> -->
+    <!-- <link rel="stylesheet" href="/assets/css/pico-main/css/pico.min.css"> -->
+    <link rel="stylesheet" href="/assets/css/test.css">
 </head>
 <body>
     <!-- loads custom styles-->
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/test.css">
     {% include header.html %}
     <br>
     <!-- loads font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
-    <main class="container" id="swup">
+    <main class="items-center" id="swup">
       {{ content }}   
     </main>
     {% include footer.html %}

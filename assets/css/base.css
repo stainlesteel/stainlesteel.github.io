@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@plugin 'daisyui' {
+    themes: night;
+}
+
+body {
+    @apply py-4
+}
+
+button {
+    @apply border-neutral
+}
+
+.big-btn {
+    @apply btn btn-secondary btn-soft
+}
+
+.custom-navbar {
+    @apply navbar bg-base-300/30 rounded-xl px-8 mt-3 mr-3 fixed w-screen top-0 backdrop-blur-[10px] z-50
+}
+
+.desc {
+    @apply text-sm
+}
+
+.squares {
+    --columns: 4
+    @apply grid gap-2 p-3
+}
+.squares #card {
+    @apply m-3 text-left p-3 rounded-2xl card card-lg bg-neutral shadow-sm
+}
+
+.contacts button {
+    @apply btn 
+}
+.contacts button #txt {
+    @apply block
+}
