@@ -2,13 +2,14 @@
 @plugin 'daisyui' {
     themes: night;
 }
-
 body {
-    @apply py-4
+    @apply py-3 gap-1
 }
-
+main {
+    @apply gap-2 m-1
+}
 button {
-    @apply border-neutral
+    @apply border-2 border-neutral
 }
 
 .big-btn {
@@ -16,7 +17,7 @@ button {
 }
 
 .custom-navbar {
-    @apply navbar bg-base-300/30 rounded-xl px-8 mt-3 mr-3 fixed w-screen top-0 backdrop-blur-[10px] z-50
+    @apply navbar border-2 border-neutral bg-base-300/30 rounded-xl px-8 mt-3 mr-3 fixed w-screen top-0 backdrop-blur-[10px] z-50
 }
 
 .desc {
@@ -27,13 +28,24 @@ button {
     --columns: 4
     @apply grid gap-2 p-3
 }
-.squares #card {
+#card {
     @apply m-3 text-left p-3 rounded-2xl card card-lg bg-neutral shadow-sm
 }
-
+#details{
+    display: inline-block;
+    padding: 0em;
+    margin-top: 0rem;
+    margin-bottom: 0.3rem;
+    color: gray;
+    font-size: 0.85rem;
+}
+.contacts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
 .contacts button {
-    @apply btn 
+    @apply btn block m-2 p-0 h-13 
 }
 .contacts button #txt {
-    @apply block
+    @apply block text-stone-400 text-sm
 }

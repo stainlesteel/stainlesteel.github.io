@@ -2,31 +2,31 @@
 layout: default
 title: blog | stainlesteel
 --- 
-<main class="container">
+<main class="container text-center items-center">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/srcery.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
-        <br><br><hr>
-        <h2>{{ page.title }}</h2>
+        <br><br>
+        <h2 class="font-bold text-3xl">{{ page.title }}</h2>
         {% assign words = page.content | number_of_words %}
         {% assign wpm = words | divided_by: 200 | at_least: 1 %}
         <p id="details">{{ page.date | date: "%B %d, %Y"}}, {{ page.category }}<br>
              {{ words }} Words, {{ wpm }} minutes to read
         </p>
+        <br>
+        <button class="btn"><i class="fa-solid fa-backward"></i>  <a href="/blog.html">Go Back</a></button>
+        <button class="btn"><i class="fa-solid fa-square-rss" style="color: orange;"></i>  <a href="/feed.xml">RSS Feed</a></button>
         <br><br>
-        <button id="blo"><i class="fa-solid fa-backward"></i>  <a href="/blog.html">Go Back</a></button>
-        <button id='blo'><i class="fa-solid fa-square-rss" style="color: orange;"></i>  <a href="/feed.xml">RSS Feed</a></button>
-        <br><br>
-        <div class="toc">
-            <details>
-                <summary role="button" class="outline">Table of Contents</summary>
-                <article>
-                    {% include toc.html html=content %}
-                </article>
-            </details>
+        <div class="collapse bg-neutral">
+            <input type="checkbox" />
+            <div class="collapse-title font-bold text-lg">Table of Contents</div>
+            <div class="collapse-content">
+                {% include toc.html html=content %}
+            </div>
         </div>
-        <article class="content-area" style="border-radius: 20px;">
+        <br>
+        <div id="card" class="text-center items-center">
             {{ content }}
-        </article>
+        </div>
         <!-- code below is wrong by design, previous is next and next is previous according to jekyll post sorting-->
          <div class="prev-next">
             {% if page.next.url %}
