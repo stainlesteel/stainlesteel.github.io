@@ -3,7 +3,7 @@ layout: default
 title: blog | stainlesteel
 --- 
 <main class="container text-center items-center">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/srcery.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/dark.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
         <br><br>
         <h2 class="font-bold text-3xl">{{ page.title }}</h2>
@@ -24,26 +24,28 @@ title: blog | stainlesteel
             </div>
         </div>
         <br>
-        <div id="card" class="text-center items-center">
+        <div id="card" class="text-center items-center blog-page">
             {{ content }}
         </div>
         <!-- code below is wrong by design, previous is next and next is previous according to jekyll post sorting-->
-         <div class="prev-next">
-            {% if page.next.url %}
+        <div>
+          
+         {% if page.next.url %}
+          <button class="btn float-left">
              <a href="{{ page.next.url }}">
-              <article class="content-area" style="border-radius: 20px;">
                 <p id="txt">Previous Post</p>
                 <h4>{{ page.next.title }}</h4>
-              </article>
              </a>
-            {% endif %}
+          </button>
+         {% endif %}
             {% if page.previous.url %}
-             <a href="{{ page.previous.url}}">
-              <article class="content-area" style="border-radius: 20px;">
-                <p id="txt">Next Post</p>
-                <h4>{{ page.previous.title }}</h4>
-              </article>
-             </a>
+              <button class="btn float-end">
+                <a href="{{ page.previous.url}}">
+                  <p id="txt">Next Post</p>
+                  <h4>{{ page.previous.title }}</h4>
+                </a>
+              </button>
             {% endif %}
+        </div>
         <script>hljs.highlightAll();</script>
 </main>
