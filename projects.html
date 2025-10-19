@@ -2,46 +2,61 @@
 layout: default
 title: projects | stainlesteel
 --- 
-<main class="container">
+<main class="container text-center items-center">
         <hr><br><br>
-        <h1>Projects</h1> 
-        <p>The projects that I think are useful enough to show. Sorted most to least useful.</p>
-        <div grid class="projects">
-            <article>
-                <img src="/assets/img/ubs64.avif" alt="ubs64">
-                <h3>Unblocked Sites 64</h3>
-                <i class="fa-brands fa-google" id="language"></i>
-                <p>A semi-successful [18k total visits] unblocked games
-                    site made in Google Sites, with 70+ games, proxies,
-                    apps, .etc.
-                </p>
-                <button id="ubs"><i class="fa-solid fa-book-atlas"></i>  Visit Site</button>        
-            </article>
-            <article>
-                <img src="/assets/img/qrcode.avif" alt="qrcode bash" width="530px">
-                <h3>CLI QRCode</h3>
-                <i class="fa-brands fa-python" id="language"></i>
-                <p>A terminal python app that can generate and parse
-                    QR Codes in many ways, (albeit the Camera parsing
-                    was written by AI).
-                </p>
-                <button id="qrcode"><i class="fa-brands fa-git-alt"></i> Git Repo</button>
-            </article>
-            <article>
-                <img src="/assets/img/aibot.avif" alt="ai discord message" width="530px" height="600px">
-                <h3>Ai Discord Bot</h3>
-                <i class="fa-brands fa-python" id="language"></i>
-                <p>A discord bot written in Python with py-cord that connects
-                    to Google Gemini's API to send a message publicly in a server.
-                    Some features include: adding custom system instructions to 
-                    modify the output of the AI (see image) and accessing Google to
-                    get up-to-date information on stuff.
-                </p>
-                <div style="display: flex;">
-                    <button id="aibot"><i class="fa-brands fa-git-alt"></i>  Git Repo</button>
-                    <button id="aibot-docker"><i class="fa-brands fa-docker"></i>  Docker Hub</button>
+        <h1 class="font-bold text-3xl">Projects</h1> 
+        <p class="desc">The projects that I think are useful enough to show. Sorted most to least useful.</p>
+        <div grid class="squares grid lg:grid-cols-3 md:grid-cols-2 xs:grid-cols-1">
+            <div id="card">
+                <figure>
+                    <img src="/assets/img/ubs64.avif" alt="ubs64">
+                </figure>
+                <div class="card-body">
+                    <h3 class="card-title">Unblocked Sites 64</h3>
+                    <div class="flex">
+                        <span class="badge">Google Sites</span>
+                        <span class="badge">Netlify</span>
+                    </div>
+                    <p>A semi-successful [18k total visits] unblocked games
+                        site made in Google Sites, with 70+ games, proxies,
+                        apps, .etc.
+                    </p>
                 </div>
-                </article>
+                <button id="ubs" class="big-btn"><i class="fa-solid fa-book-atlas"></i>  Visit Site</button>
+            </div>
+            <div id="card">
+                <figure>
+                    <img src="/assets/img/qrcode.avif" alt="qrcode bash" width="530px">
+                </figure>
+                <div class="card-body">
+                    <h3 class="card-title">CLI QRCode</h3>
+                    <span class="badge">Python</span>
+                    <p>A terminal python app that can generate and parse
+                        QR Codes in many ways, (albeit the Camera parsing
+                        was written by AI).
+                    </p>
+                </div>
+                <button id="qrcode" class="big-btn"><i class="fa-brands fa-git-alt"></i> Git Repo</button>
+            </div>
+            <div id="card">
+                <figure>
+                    <img src="/assets/img/aibot.avif" alt="ai discord message" width="530px" height="600px">
+                </figure>
+                <div class="card-body">
+                    <h3 class="card-title">Ai Discord Bot</h3>
+                    <span class="badge">Python</span>
+                    <p>A discord bot written in Python with py-cord that connects
+                        to Google Gemini's API to send a message publicly in a server.
+                        Some features include: adding custom system instructions to 
+                        modify the output of the AI (see image) and accessing Google to
+                        get up-to-date information on stuff.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2">
+                    <button id="aibot" class="big-btn"><i class="fa-brands fa-git-alt"></i>  Git Repo</button>
+                    <button id="aibot-docker" class="big-btn"><i class="fa-brands fa-docker"></i>  Docker Hub</button>
+                </div>
+            </div>
             <br><br><br><br><br>
         </div>
 </main>
