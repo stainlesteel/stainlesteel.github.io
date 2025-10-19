@@ -5,13 +5,9 @@
 body {
     @apply py-3 gap-1
 }
-main {
-    @apply gap-2 m-1
-}
 button {
     @apply border-2 border-neutral
 }
-
 
 .big-btn {
     @apply btn btn-secondary btn-soft
@@ -28,7 +24,7 @@ button {
 }
 
 .custom-navbar {
-    @apply navbar border-2 border-neutral bg-base-300/30 rounded-xl px-8 mt-3 mr-3 fixed w-screen top-0 backdrop-blur-[10px] z-50
+    @apply navbar border-2 border-neutral bg-base-300/30 rounded-xl px-8 mt-3 mr-3 fixed w-screen top-0 backdrop-blur-[10px] z-5
 }
 
 .desc {
