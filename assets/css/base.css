@@ -3,7 +3,7 @@
     themes: night;
 }
 body {
-    @apply py-3 gap-1
+    @apply py-3
 }
 button {
     @apply border-2 border-neutral
@@ -24,7 +24,7 @@ button {
 }
 
 .custom-navbar {
-    @apply navbar border-2 border-neutral bg-base-300/30 rounded-xl px-8 mt-3 mr-3 fixed w-screen top-0 backdrop-blur-[10px] z-5
+    @apply navbar flex border-2 border-neutral bg-base-300/30 rounded-xl px-8 mt-3 mr-3 fixed w-screen top-0 backdrop-blur-[10px] z-10
 }
 
 .desc {
