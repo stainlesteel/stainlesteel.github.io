@@ -1,11 +1,17 @@
 --- 
 layout: default
-title: projects | stainlesteel
+title: projects | Puneet Deol
 --- 
 <main class="container text-center items-center">
         <hr><br><br>
         <h1 class="font-bold text-3xl">Projects</h1> 
-        <p class="desc">The projects that I think are useful enough to show. Sorted most to least useful.</p>
+        <br>
+        <p class="desc">Best projects will be shown here. All other ones are on Github.
+        </p>
+        <br>
+        <button class="btn"><i class="fa-brands fa-github"></i> <a href="https://github.com/stainlesteel?tab=repositories" style="text-decoration: none;">Other Projects</a></button>
+        <br>
+        <br>
         <div grid class="squares grid lg:grid-cols-3 md:grid-cols-2 xs:grid-cols-1">
             <div id="card">
                 <figure>
@@ -16,8 +22,10 @@ title: projects | stainlesteel
                     <div class="flex">
                         <span class="badge">Google Sites</span>
                         <span class="badge">Netlify</span>
+                        <span class="badge">Cloudflare</span>
+                        <span class="badge">Railway</span>
                     </div>
-                    <p>A semi-successful [18k total visits] unblocked games
+                    <p>A niche unblocked games
                         site made in Google Sites, with 70+ games, proxies,
                         apps, .etc.
                     </p>
@@ -26,36 +34,19 @@ title: projects | stainlesteel
             </div>
             <div id="card">
                 <figure>
-                    <img src="/assets/img/qrcode.avif" alt="qrcode bash" width="530px">
+                    <img src="/assets/img/flutterfin.avif" alt="flutterfin">
                 </figure>
                 <div class="card-body">
-                    <h3 class="card-title">CLI QRCode</h3>
-                    <span class="badge">Python</span>
-                    <p>A terminal python app that can generate and parse
-                        QR Codes in many ways, (albeit the Camera parsing
-                        was written by AI).
+                    <h3 class="card-title">Flutterfin</h3>
+                    <div class="flex">
+                        <span class="badge">Flutter</span>
+                        <span class="badge">Dart</span>
+                    </div>
+                    <p>A Jellyfin cient made in Flutter; with support for
+                       server management, downloads, and is fairly close feature-wise to the official Web client.
                     </p>
                 </div>
-                <button onclick="window.open('https://github.com/stainlesteel/CLI_QRCode', '_blank');" class="big-btn"><i class="fa-brands fa-git-alt"></i> Git Repo</button>
-            </div>
-            <div id="card">
-                <figure>
-                    <img src="/assets/img/aibot.avif" alt="ai discord message" width="530px" height="600px">
-                </figure>
-                <div class="card-body">
-                    <h3 class="card-title">Ai Discord Bot</h3>
-                    <span class="badge">Python</span>
-                    <p>A discord bot written in Python with py-cord that connects
-                        to Google Gemini's API to send a message publicly in a server.
-                        Some features include: adding custom system instructions to 
-                        modify the output of the AI (see image) and accessing Google to
-                        get up-to-date information on stuff.
-                    </p>
-                </div>
-                <div class="grid grid-cols-2">
-                    <button onclick="window.open('https://github.com/stainlesteel/ai-discord-bot', '_blank');" class="big-btn"><i class="fa-brands fa-git-alt"></i>  Git Repo</button>
-                    <button onclick="window.open('https://hub.docker.com/r/stainlesteel/ai-discord-bot', '_blank');" class="big-btn"><i class="fa-brands fa-docker"></i>  Docker Hub</button>
-                </div>
+                <button onclick="window.open('https://github.com/stainlesteel/Flutterfin/', '_blank');" class="big-btn"><i class="fa-brands fa-git-alt"></i> Git Repo</button>
             </div>
             <br><br><br><br><br>
         </div>

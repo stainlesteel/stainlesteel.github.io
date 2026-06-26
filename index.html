@@ -1,87 +1,39 @@
 --- 
 layout: default
-title: home | stainlesteel
+title: home | Puneet Deol
 --- 
 
 <main class="container text-center w-screen lg:max-w-screen">
         <br><br>
-        <h2 class="font-bold text-3xl">hello.</h2>
+        <h2 class="font-bold text-3xl">hello</h2>
         <br>
-        <p class="desc">Intermiedate python dev/self hoster.
+        <p class="desc"> 14 year old with computers as a hobby.
         </p>
         <br>
-        <hr class="pt-2 pb-2">
-        <h2 class="font-bold text-3xl">Things I have done/know about</h2>
+        <h2 class="font-bold text-3xl">Technologies used</h2>
         <br>
-        <p class="desc">Categorized into 4 cards.</p>
-        <br>
-        <div class="squares  grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-1">
-            <div id="card"> 
-                <h3 class="card-title inline-block"><i class="fa-solid fa-sitemap"></i> Frontend</h3>
-                <p class="card-body">I do not have good frontend experience, but still know
-                   HTML and CSS (as demonstrated in this site). I may also 
-                   unlikely learn Javascript.
-                </p>
-            </div>
-            <div id="card">
-                <h3 class="inline-block card-title"><i class="fa-solid fa-file-code"></i> AppDev</h3>
-                <p class="card-body">I am a LOT better in developing desktop apps, specifically with Python.
-                   Ranging from simple command-line apps, to GUI apps with either GTK or Tkinter,
-                   to APIs, .etc.
-                </p>
-            </div>
-            <div id="card">
-                <h3 class="inline-block card-title"><i class="fa-brands fa-dev"></i> DevOps</h3>
-                <p class="card-body">I know a fair amount about Docker and Git, having pulled/pushed and 
-                   multiple containers/commits respectively. Also used Github Actions as
-                   part of CI/CD (barely).
-                </p>
-            </div>
-            <div id="card">
-                <h3 class="inline-block card-title"><i class="fa-solid fa-server"></i> 'Sysadmin'</h3>
-                <p class="card-body">Title is obviously a lie, I am not a sysadmin. But I have experience
-                   with running a homelab and managing it. Which is just running docker
-                   containers and going to DDG or AI whenever something goes wrong.
-                </p>
-            </div>
-        </div>
-        <hr><br>
-        <h2 class="font-bold text-2xl">Other stuff</h2>
-        <div grid class="squares grid grid-cols-2 sm:grid-cols-1">
-            <div id="card">
-                <h3 class="inline-block card-title"><i class="fa-solid fa-money-check-dollar"></i> Surveys</h3>
-                <p class="card-body">I do surveys online on Five Surveys, as a way to get money.
-                    Would I recommend it? No. It does pay more than other survey
-                    apps, but at the cost of being greedy.
-                </p>
-            </div>
-            <div id="card">
-                <h3 class="inline-block card-title"><i class="fa-brands fa-lastfm"></i> Last.fm Last Played</h3>
-                <p class="card-body">This shows the last played song from my LastFM profile.</p>
-                {% include lastfm.html %}
-            </div>
+        <div class="inline-icon-list">
+          <i class="fa-brands fa-flutter fa-2xl"></i>
+          <i class="fa-brands fa-python fa-2xl"></i>
+          <i class="fa-brands fa-docker fa-2xl"></i>
+          <i class="fa-brands fa-css fa-2xl"></i>
+          <i class="fa-brands fa-linux fa-2xl"></i>
         </div>
         <br>
-        <h2 class="font-bold text-3xl">Quick Contact</h2><br>
-        <p class="desc">Two easiest ways to contact me.</p><br>
+        <br>
+        <h2 class="font-bold text-3xl">Favourite apps</h2>
+        <br>
+        <div grid class="inline-icon-list">
+          <i class="fa-brands fa-firefox-browser fa-2xl"></i>
+          <i class="fa-brands fa-fedora fa-2xl"></i>
+          <i class="fa-brands fa-github fa-2xl"></i>
+          <i class="fa-brands fa-cloudflare fa-2xl"></i>
+        </div>
+        <br><br>
+        <br>
+        <h2 class="font-bold text-3xl">Contact</h2><br>
         <button class="btn"><i class="fa-brands fa-github"></i> <a href="https://github.com/stainlesteel/" style="text-decoration: none;">Github</a></button>
         <button class="btn"><i class="fa-solid fa-envelope"></i> <a href="pd4500@protonmail.com" style="text-decoration: none;">Email</a></button>
         <br><br>
         <br><br><br><br><br>
 </main>
-<script async>
-      // this is a function to load lastfm widget
-       
-       const mango = async function() {
-        let url = "https://fm.qwsteu.org/main?user=pd684_";
-        let feth = await fetch(url);
-        let json = await feth.json();
-
-        console.log(json.title);
-        console.log(json.artist);
-
-        document.querySelector("#lastfm-header").innerHTML = `${json.title}`;
-        document.querySelector("#lastfm-artist").innerHTML = `${json.artist}`;
-       };
-       mango();
-</script>

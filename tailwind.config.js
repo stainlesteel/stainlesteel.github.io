@@ -14,10 +14,10 @@ module.exports = {
     },
   },
   plugins: [
-    require('daisyui'),// No need to explicitly list daisyui here if you use the CSS-first approach
+    require('daisyui')
   ],
   daisyui: {
-    themes: ["night"],
+    themes: ["retro"],
     logs: true,
   },
 }
